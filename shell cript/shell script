@@ -1,0 +1,44 @@
+#!/bin/bash
+while true;do
+        echo "menu"
+        echo "1.create directory"
+        echo "2.create file"
+        echo "3.chwck  permissions"
+        echo "4.exit"
+
+
+        read -p "Enter  the choice :" choice
+
+   if [[ $choice == 1 ]];then
+           read -p "Enter the name of the directory:" dirname
+           if [[ -d $dirname ]];then
+                   echo "directory exist"
+           else
+                   echo "directoey does not exist creating new directory:"
+                   mkdir $dirname
+           fi
+   elif [[ $choice == 2 ]];then
+           read -p "Enter the name of the filename:" filename
+
+
+           if [[ -f $filename ]];then
+
+                   echo "" 
+
+           else
+                   touch $filename
+           fi
+elif [[ $choice == 3 ]];then
+           read -p "Enter the name of the file:" filename
+           if [[ -e $filename ]];then
+                   echo "changing file permission to 777"
+                   chmod 777 $filename
+           else
+                   echo "file not found:"
+           fi
+   elif [[ $choice == 4 ]];then
+           exit
+   fi
+done
+
+
