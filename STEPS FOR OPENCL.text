@@ -1,0 +1,100 @@
+!nvidia-smi
+!sudo apt update
+!sudo apt purge *nvidia* -y
+!sudo apt install nvidia-driver-530 -y
+enter 32
+enter 1
+!clinfo
+!apt-get install opencl-headers
+!apt-get install ocl-icd-liopencl1
+!sudo find /usr/ -name cl.h 2>/dev/null
+!gcc -o hello_world opencl_hello_world.c -I "usr/include/CL" -L "/usr/include/CL" -lOpenCL
+!./hello_world
+
+
+
+
+
+
+
+STEP FOR OPENACC
+
+
+
+
+skepy id   :live:.cid.ef6132e81100e73b
+
+
+
+ CUDA interview ques:
+ 
+How many different kind of memories are in a GPU ?
+What means coalesced / uncoalesced?
+Can you implement a matrix transpose kernel?
+What is a warp ?
+How many warps can run simultaneously inside a multiprocessor?
+What is the difference between a block and a thread ?
+Can thread communicate between them? and blocks ?
+Can you describe how works a cache?
+What is the difference between shared memory and registers?
+Which algorithms perform better on the gpu? data bound or cpu bound?
+Which steps will you perform to port of an application to cuda ?
+What is a barrier ?
+What is a Stream ?
+Can you describe what means occupancy of a kernel?
+What means structure of array vs array of structures?
+
+
+
+
+1. What do you mean by Cuda core?
+2. What are the components of gpu?
+3. What are the different memories used in gpu?
+4. What are memories which are particular to each thread?
+5. Which memory is used by all threads in a single block?
+6. What is the use of Constant memory?
+7. What is the use of Texture memory?
+8. What do you mean by bock and grid in Cuda?
+
+9. What is the difference between CPU and GPU?
+10. Why do we need GPU when already we have CPU?
+11. What is the advantage of shared memory in CUDA?
+12. What is the advantage of constant memory in CUDA?
+13. What is warp in CUDA?
+14. What is the use of cudaMalloc() function and what arguments does it accept?
+15. What is the use of cudaMemcpy() function and what arguments does it accept?
+16. What is the use of cudaFree() function and what arguments does it accept?
+17. What is kernel in Cuda?
+18. How kernel is defined in Cuda?
+19. How to define a kernel which is called from another kernel?
+20. How kernels are called from main() function?
+21. What is dim3 in Cuda?
+22. How can we define a multi dimensional structure of grid?
+23. How can we define a multi dimensional structure of block?
+24. What are the keywords used for finding block id and thread id?
+25. What are keywords used for block size and grid size?
+26. Name any Nvidia gpu card which consists of two gpus?
+27. How to find out number of gpus in your system?
+28. How to find out id of current gpu on your system?
+29. What are the different properties of gpu?
+30. How to find out properties of gpu?
+31. Which properties of gpu are used to find its compute capability?
+32. How to set any gpu as current gpu when its id is given?
+33. What is the use of cudaChooseDevice() function and what arguments does it accept?
+34. What is the use of memset() function and what arguments does it accept?
+35. How to declare a variable which is to be saved in shared memory?
+36. How to declare a variable which is to be saved in constant memory?
+37. What is the use of cudaMemcpyToSymbol() function and what arguments does it accept?
+38. What are the different alternatives to Cuda?
+39. What is parallel computing?
+40. What are the advantages of parallel computing?
+41. What are the different architectures according to Flynn's taxonaomy?
+42. What are different parallel programming models?
+43. What are the two basic classes of parallel architectures?
+44. Which are general purpose parallel architectures?
+45. Which are special purpose parallel architecures?
+46. What is the unit used to represent frequency of a gpu?
+47. What do you understand by Mflop?
+48. What do you mean by speedup with respect to performance of parallel computers?
+49. What is Amdahl's law? Give the expression for the speed up.
+
