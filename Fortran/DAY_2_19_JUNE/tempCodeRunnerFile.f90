@@ -1,0 +1,1 @@
+program rectangle_area
