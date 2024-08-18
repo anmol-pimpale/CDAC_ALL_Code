@@ -1,0 +1,8 @@
+1.mpi load
+spack load openmpi
+
+2.compile code
+mpicc filename
+
+3.run code
+mpirun -np 3 for no.of process exe.file name
